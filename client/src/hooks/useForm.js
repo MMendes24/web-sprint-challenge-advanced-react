@@ -2,11 +2,15 @@
 import { useState } from 'react'
 
 export const useForm = (initialItems) => {
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const [ items, setItems ] = useState(initialItems)
+
 
     const handleChanges = (e) => {
         setItems({ ...items, [e.target.name]: e.target.value });
       };
 
-      return [ items, handleChanges ] //CONSTANTLY CHECK ORDER OF ITEMS
+
+
+      return [ showSuccessMessage, setShowSuccessMessage, items, handleChanges ] //CONSTANTLY CHECK ORDER OF ITEMS
 }
