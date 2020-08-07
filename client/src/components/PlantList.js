@@ -4,21 +4,7 @@ import axios from "axios";
 export default class PlantList extends Component {
   // add state with a property called "plants" - initialize as an empty array
  state = { 
-    plants: [
-      // {
-      // description: "",
-      // difficulty: "",
-      // id: "",
-      // img: "",
-      // light: "direct",
-      // name: "",
-      // price: "",
-      // scientificName: "",
-      // sizes: [],
-      // length: "",
-      // watering: "",
-      // }
-    ]
+    plants: []
   }
   
   // when the component mounts:
