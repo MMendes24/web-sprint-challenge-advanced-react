@@ -22,10 +22,15 @@ test("form shows success message on submit with form details", async () => {
     
     //firing section: broadside! 
     fireEvent.change(fnIn, { target: { value: 'Mars'} })
+
     fireEvent.change(lnIn, { target: { value: 'Mendes'} })
+
     fireEvent.change(addrIn, { target: { value: 'mars@mars.com'} })
+
     fireEvent.change(cityIn, { target: { value: 'Biloxi'} })
+
     fireEvent.change(stateIn, { target: { value: 'MS'} })
+
     fireEvent.change(zip, { target: { value: '39530'} })
 
     //let's define and click the much dreaded button
