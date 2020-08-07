@@ -22,16 +22,22 @@ test("form shows success message on submit with form details", async () => {
     
     //firing section: broadside! 
     fireEvent.change(fnIn, { target: { value: 'Mars'} })
+    expect(await screen.findByDisplayValue("Mars")).toBeInTheDocument()
 
     fireEvent.change(lnIn, { target: { value: 'Mendes'} })
+    expect(await screen.findByDisplayValue("Mendes")).toBeInTheDocument()
 
     fireEvent.change(addrIn, { target: { value: 'mars@mars.com'} })
+    expect(await screen.findByDisplayValue("mars@mars.com")).toBeInTheDocument()
 
     fireEvent.change(cityIn, { target: { value: 'Biloxi'} })
+    expect(await screen.findByDisplayValue("Biloxi")).toBeInTheDocument()
 
     fireEvent.change(stateIn, { target: { value: 'MS'} })
+    expect(await screen.findByDisplayValue("MS")).toBeInTheDocument()
 
     fireEvent.change(zip, { target: { value: '39530'} })
+    expect(await screen.findByDisplayValue("39530")).toBeInTheDocument()
 
     //let's define and click the much dreaded button
     const checkoutB = screen.getByRole('button')
